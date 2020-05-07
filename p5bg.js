@@ -6,7 +6,7 @@ var canvas;
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
-  canvas.style('z-index',-1);
+  canvas.style('z-index',-2);
   canvas.style('display','block');
   canvas.style('position','fixed');
   colorMode(HSB, 360, 100, 100, 100);

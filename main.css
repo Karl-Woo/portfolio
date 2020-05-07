@@ -22,6 +22,7 @@ body {
 }
 
 .navbar a {
+  z-index: +1;
   float: left;
   padding-top: 20px;
   color: #e1f4f3;
@@ -170,6 +171,31 @@ body {
   transition: letter-spacing 2s;
 }
 
+.contact{
+  position:absolute;
+  top: 550px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  width:40%;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #e1f4f3;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+}
+
+#smlink{
+  transition: filter 1s;
+}
+
+#smlink:hover{
+  filter: drop-shadow(5px 5px 5px #222);
+  transition: filter 1s;
+}
+
 .text h {
   position:absolute;
   margin-top: 150px;
@@ -254,10 +280,10 @@ body {
 
 .content{
   position:relative;
-  top: 440px;
+  top: 200px;
   width: 60%;
   left:50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -267,8 +293,93 @@ body {
   transition: width 2s;
 }
 
+.message{
+  position:relative;
+  top: 200px;
+  width: 60%;
+  left:50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #e1f4f3;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+
+}
+
+.contact p, .message p{
+  letter-spacing: normal;
+  transition: letter-spacing 2s;
+}
+
+.contact p:hover, .message p:hover{
+letter-spacing: 1px;
+cursor:default;
+transition: letter-spacing 2s;
+}
+
+#input_text{
+  width:50%;
+  height:200px;
+  background-color: white;
+  border-radius: 20px;
+  border: 3px solid #e1f4f3;
+  transition: width 2s;
+}
+
+#input_text:focus{
+  width:51%;
+  transition: width 2s;
+}
+
+.message button{
+  margin-top: 10px;
+  background-color: #e1f4f3;
+  width:20%;
+  height:30px;
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  border:none;
+  opacity: 100%;
+  transition: text-shadow 2s;
+  transition: filter 1s;
+  color: #142850;
+  border-radius: 5px;
+}
+
+.message button:hover{
+  text-shadow: 2px 2px 5px white;
+  transition: text-shadow 2s;
+  filter: drop-shadow(5px 5px 5px #222);
+  transition: filter 1s;
+  cursor: pointer;
+}
+
 .content:hover{
   width: 61%;
+  transition: width 2s;
+}
+
+.contents{
+  position:relative;
+  top: 200px;
+  width: 80%;
+  left:50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #d7fffd;
+  border-radius: 10px;
+  transition: width 2s;
+}
+
+.contents:hover{
+  width: 81%;
   transition: width 2s;
 }
 
@@ -398,6 +509,108 @@ body {
   letter-spacing: normal;
   cursor: pointer;
   text-align: center;
+}
+
+.mySlides {display: none}
+.mySlides img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  padding-top:20px;
+  padding-bottom: 10px;
+}
+
+.dots{
+  text-align:center;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #d7fffd;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text1 {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #142850;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  opacity:70%;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+#link1:link{
+  color:#142850;
+}
+
+#link1:visited{
+  color:#142850;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
 
 @media screen and (max-width: 500px) {
